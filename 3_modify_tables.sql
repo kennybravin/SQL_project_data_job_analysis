@@ -41,9 +41,20 @@ COPY skills_job_dim
 FROM 'E:\SQL_project_data_job_analysis\csv_files\skills_job_dim.csv'
 WITH (FORMAT csv, HEADER true, DELIMITER ',', ENCODING 'UTF8');
 
+SELECT *
+FROM job_postings_fact
+LIMIT 100;
 
 SELECT *
 FROM company_dim
+LIMIT 100;
+
+SELECT *
+FROM skills_dim
+LIMIT 100;
+
+SELECT *
+FROM skills_job_dim
 LIMIT 100;
 
 CREATE TABLE january_jobs AS
